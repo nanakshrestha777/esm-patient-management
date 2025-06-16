@@ -1,5 +1,6 @@
 import { SkeletonText } from '@carbon/react';
-import { type Obs } from '@openmrs/esm-api/src';
+import type { Obs } from '@openmrs/esm-api';
+
 import classNames from 'classnames';
 import React, { useMemo } from 'react';
 import { useTranslation } from 'react-i18next';

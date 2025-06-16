@@ -5,7 +5,7 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import useWardLocation from '../hooks/useWardLocation';
 import { useWardConfig } from './ward-view.resource';
-import styles from './ward-view.scss';
+// import styles from './ward-view.scss';
 
 const WardView: React.FC<{}> = () => {
   const response = useWardLocation();
@@ -25,11 +25,11 @@ const WardView: React.FC<{}> = () => {
 
   const wardId = wardConfig.id;
 
-  return (
-    <div className={classNames(styles.wardView, styles.verticalTiling)}>
-      <ExtensionSlot name={wardId} />
-    </div>
-  );
+  // return (
+  //   <div className={classNames(styles.wardView, styles.verticalTiling)}>
+  //     <ExtensionSlot name={wardId} />
+  //   </div>
+  // );
 };
 
 export default WardView;

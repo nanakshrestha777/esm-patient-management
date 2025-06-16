@@ -7,13 +7,14 @@
     "packages/*"
   ],
   "scripts": {
-    "start": "openmrs develop",
+    "start": "openmrs develop --sources packages/esm-active-visits-app packages/esm-bed-management-app packages/esm-patient-registration-app packages/esm-patient-search-app packages/esm-appointments-app packages/esm-bed-management-app packages/esm-patient-list-management-app packages/esm-patient-management-app packages/esm-service-queues-app packages/esm-ward-app",
     "ci:publish": "yarn workspaces foreach --all --topological --exclude @openmrs/esm-patient-management npm publish --access public --tag latest",
     "ci:prepublish": "yarn workspaces foreach --all --topological --exclude @openmrs/esm-patient-management npm publish --access public --tag next",
     "release": "yarn workspaces foreach --all --topological version",
     "verify": "turbo run lint typescript test --concurrency=1",
     "test-e2e": "playwright test",
-    "postinstall": "husky install"
+    "postinstall": "husky install",
+    "build": "turbo run build"
   },
   "devDependencies": {
     "@babel/core": "^7.11.6",
@@ -62,6 +63,7 @@
     "react-dom": "^18.1.0",
     "react-i18next": "^11.18.6",
     "react-router-dom": "^6.3.0",
+    "rxjs": "^6.6.7",
     "sass": "^1.29.0",
     "sass-loader": "^10.1.0",
     "swc-loader": "^0.2.3",
@@ -76,6 +78,9 @@
   "lint-staged": {
     "*.{ts,tsx}": "eslint --cache --fix --max-warnings 0",
     "*.{css,scss,ts,tsx}": "prettier --cache --write --list-different"
+  },
+  "resolutions": {
+    "open": "7.4.2"
   },
   "packageManager": "yarn@4.9.1"
 }

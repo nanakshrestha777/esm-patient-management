@@ -13,18 +13,6 @@
       "offline": true
     },
     {
-      "name": "service-queues-dashboard-link",
-      "component": "serviceQueuesDashboardLink",
-      "slot": "homepage-dashboard-slot",
-      "meta": {
-        "name": "service-queues",
-        "slot": "service-queues-dashboard-slot",
-        "title": "Service queues"
-      },
-      "online": true,
-      "offline": true
-    },
-    {
       "name": "queue-table-by-status-menu-dashboard-link",
       "component": "queueTableByStatusMenu",
       "meta": {
@@ -35,11 +23,7 @@
       "online": true,
       "offline": true
     },
-    {
-      "component": "root",
-      "name": "service-queues-dashboard",
-      "slot": "service-queues-dashboard-slot"
-    },
+
     {
       "name": "queue-table-by-status-view",
       "component": "queueTableByStatusView",

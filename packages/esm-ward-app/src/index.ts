@@ -7,18 +7,15 @@ import {
 } from '@openmrs/esm-framework';
 import { configSchema } from './config-schema';
 import { moduleName } from './constant';
-import { createDashboardLink } from './createDashboardLink.component';
+// import { createDashboardLink } from './createDashboardLink.component';
 
 export const importTranslation = require.context('../translations', false, /.json$/, 'lazy');
 
-const options = {
-  featureName: 'ward',
-  moduleName,
-};
+const options = { featureName: 'ward', moduleName };
 
-export const root = getAsyncLifecycle(() => import('./root.component'), options);
+// export const root = getAsyncLifecycle(() => import('./root.component'), options);
 
-export const wardDashboardLink = getSyncLifecycle(createDashboardLink({ name: 'ward', title: 'wards' }), options);
+// export const wardDashboardLink = getSyncLifecycle(createDashboardLink({ name: 'ward', title: 'wards' }), options);
 
 export const wardView = getAsyncLifecycle(() => import('./ward-view/ward-view.component'), options);
 

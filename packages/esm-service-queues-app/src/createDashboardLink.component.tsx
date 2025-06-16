@@ -21,19 +21,19 @@ function DashboardExtension({ dashboardLinkConfig }: { dashboardLinkConfig: Dash
     return decodeURIComponent(lastElement);
   }, [location.pathname]);
 
-  return (
-    <ConfigurableLink
-      className={classNames('cds--side-nav__link', {
-        'active-left-nav-link': navLink.match(name),
-      })}
-      to={`${spaBasePath}/${name}`}>
-      {t('serviceQueues', 'Service queues')}
-    </ConfigurableLink>
-  );
+  // return (
+  //   <ConfigurableLink
+  //     className={classNames('cds--side-nav__link', {
+  //       'active-left-nav-link': navLink.match(name),
+  //     })}
+  //     to={`${spaBasePath}/${name}`}>
+  //     {t('serviceQueues', 'Service queues')}
+  //   </ConfigurableLink>
+  // );
 }
 
-export const createDashboardLink = (dashboardLinkConfig: DashboardLinkConfig) => () => (
-  <BrowserRouter>
-    <DashboardExtension dashboardLinkConfig={dashboardLinkConfig} />
-  </BrowserRouter>
-);
+// export const createDashboardLink = (dashboardLinkConfig: DashboardLinkConfig) => () => (
+//   <BrowserRouter>
+//     <DashboardExtension dashboardLinkConfig={dashboardLinkConfig} />
+//   </BrowserRouter>
+// );

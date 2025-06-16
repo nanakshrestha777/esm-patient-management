@@ -15,16 +15,7 @@
     }
   },
   "extensions": [
-    {
-      "name": "ward-dashboard-link",
-      "component": "wardDashboardLink",
-      "slot": "homepage-dashboard-slot",
-      "meta": {
-        "name": "ward",
-        "slot": "ward-dashboard-slot",
-        "title": "Wards"
-      }
-    },
+
     {
       "component": "root",
       "name": "ward-dashboard",
