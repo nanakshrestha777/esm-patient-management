@@ -7,7 +7,7 @@
     "packages/*"
   ],
   "scripts": {
-    "start": "openmrs develop --sources packages/esm-active-visits-app packages/esm-bed-management-app packages/esm-patient-registration-app packages/esm-patient-search-app packages/esm-appointments-app packages/esm-bed-management-app packages/esm-patient-list-management-app packages/esm-patient-management-app packages/esm-service-queues-app packages/esm-ward-app",
+    "start": "openmrs develop --sources packages/esm-active-visits-app packages/esm-bed-management-app packages/esm-patient-registration-app packages/esm-patient-search-app packages/esm-appointments-app packages/esm-bed-management-app packages/esm-patient-list-management-app packages/esm-patient-management-app packages/esm-service-queues-app packages/esm-ward-app packages/esm-laboratory-app",
     "ci:publish": "yarn workspaces foreach --all --topological --exclude @openmrs/esm-patient-management npm publish --access public --tag latest",
     "ci:prepublish": "yarn workspaces foreach --all --topological --exclude @openmrs/esm-patient-management npm publish --access public --tag next",
     "release": "yarn workspaces foreach --all --topological version",
